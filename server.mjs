@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import registerRoutes from './routes/index.mjs'
 import notFoundMiddleware from './middlewares/404.mjs';
 import httpErrors from './middlewares/errors.mjs';
 
@@ -19,12 +20,8 @@ const PORT = 8080;
 // 👂 make the app 'listen' on that port
 app.listen(PORT, () => console.log(`The app is running on port: ${PORT}`));
 
-// 🤝 handle response
-app.get('/', (req, res) => {
-  res.status(200).json({
-    message: 'Hello, welcome to the REST API'
-  });
-})
+// 📝 register routes
+registerRoutes(app);
 
 // 🤷 handle unkown route's requests
 app.use(notFoundMiddleware);
