@@ -27,12 +27,9 @@ export default (err, req, resp, next) => {
   
   const message = (err.message || httpErrors[statusCode] || `${err}`).trim();
 
-  if (statusCode === 500) {
-    console.error(statusCode, message);
-    if (err) {
-      console.error(err);
-    }
-  }
+  // if (statusCode === 500) {
+  //   console.error(statusCode, message);
+  // }
   
   resp.status(statusCode).json({ statusCode, message });
 };
