@@ -1,4 +1,4 @@
-import users from './users.mjs';
+import users from './users.js';
 
 export default (app) => {
   users(app);

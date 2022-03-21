@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import registerRoutes from './routes/index.mjs'
-import notFoundMiddleware from './middlewares/404.mjs';
-import httpErrors from './middlewares/errors.mjs';
+import registerRoutes from './routes/index.js'
+import notFoundMiddleware from './middlewares/404.js';
+import httpErrors from './middlewares/errors.js';
 
 
 // 🚀 create the express app
