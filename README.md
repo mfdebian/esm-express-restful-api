@@ -4,27 +4,39 @@
 
 Run the app
 
-`$ node server.mjs`
+`$ node server.js`
 
 ---
 
-### Examples:
+Working routes:
+- `/users`
+- `/posts`
+
+### Usage
 
 Send a request
 
 `$ curl http://localhost:8080`
 
-Query the `/users` route
+Query a route
 
 `$ curl http://localhost:8080/users`
 
-Get one user using the `/users/id` route
+Get one document using the `/id` route
 
-`$ curl http://localhost:8080/users/1`
+`$ curl http://localhost:8080/posts/1`
 
 Make a POST request
 
-`$ curl -X POST http://localhost:8080/users/ -H "Content-Type: application/json" -d '{"name": "A persons name", "email": "aname@person.com"}'`
+`$ curl -X POST http://localhost:8080/posts/ -H "Content-Type: application/json" -d '{"title": "A title", "body": "A body"}'`
+
+Make a PUT request
+
+`curl -X PUT http://localhost:8080/users/1 -H "Content-Type: application/json" -d '{"name": "A persons name", "email": "aname@person.com"}'`
+
+Make a DELETE request
+
+`curl -X DELETE http://localhost:8080/posts/1 -H "Content-Type: application/json"`
 
 The app takes care of non existing routes and other common HTTP errors.
 
