@@ -4,7 +4,11 @@
 
 Run the app
 
-`$ node server.js`
+`$ npm start`
+
+Run the tests suite
+
+`$ npm test`
 
 ---
 
@@ -45,3 +49,5 @@ The app takes care of non existing routes and other common HTTP errors.
 _Pro-tip: If you're using [curl](https://curl.se/), run it on silent mode using the `-s` option and use a JSON parser like [jq](https://github.com/stedolan/jq) to get a better readable output._
 
 _This app makes use of the [JSONPlaceholder](https://github.com/typicode/jsonplaceholder) site for data usage._
+
+_Tested using [Vitest](https://vitest.dev/) and [SuperTest](https://www.npmjs.com/package/supertest)._
