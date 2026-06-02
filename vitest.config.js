@@ -1,11 +1,10 @@
-import {defineConfig} from 'vitest/config';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    poolOptions: {
-      forks: {
-        singleFork: true,
-      },
-    },
+    execArgv: ['--expose-gc'],
+    isolate: false,
+    maxWorkers: 1,
+    vmMemoryLimit: '300Mb',
   },
 });
